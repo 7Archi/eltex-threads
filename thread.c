@@ -14,10 +14,10 @@ int main()
 {
     pthread_t th[3];
     int a[3];
-    for(int i = 1; i <= 3; i++)
+    for(int i = 0; i < 3; i++)
     {
-        a[i-1]=i;
-        pthread_create(&th[i-1], NULL, func, &a[i-1]);
+        a[i]=i;
+        pthread_create(&th[i], NULL, func, &a[i]);
     }
     sleep(1);
     return 0;
